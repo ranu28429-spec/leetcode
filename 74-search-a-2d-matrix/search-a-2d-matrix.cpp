@@ -1,6 +1,9 @@
 class Solution {
 public:
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
+        
+        // bruteforce solution
+
         int m = matrix.size();
         int n = matrix[0].size();
 
