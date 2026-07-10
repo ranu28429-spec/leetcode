@@ -12,6 +12,6 @@ public:
         }
          nums=result;
 
-        return result.size();
+        return nums.size();
     }
 };
