@@ -1,0 +1,40 @@
+class Solution {
+public:
+    vector<vector<int>> fourSum(vector<int>& nums, int target) {
+
+        sort(nums.begin(), nums.end());
+        int n = nums.size();
+        int start = 2, end = n - 1;
+        int mid;
+        vector<vector<int>> ans;
+        for (int i = 0; i < n - 3; i++) {
+            if (i > 0 && nums[i - 1] == nums[i])
+                continue;
+            for (int j = i + 1; j < n - 2; j++) {
+                if (j > i + 1 && nums[j - 1] == nums[j])
+                    continue;
+                start = j + 1, end = n - 1;
+                while (start < end) {
+
+                    if (1LL*nums[i] + nums[j] + nums[start] + nums[end] == target) {
+                        ans.push_back(
+                            {nums[i], nums[j], nums[start], nums[end]});
+                        start++, end--;
+
+                        while (start < end && nums[start] == nums[start - 1]) {
+                            start++;
+                        }
+                        while (start < end && nums[end] == nums[end + 1]) {
+                            end--;
+                        }
+                    } else if (1LL*nums[i] + nums[j] + nums[start] + nums[end] <
+                               target) {
+                        start++;
+                    } else
+                        end--;
+                }
+            }
+        }
+        return ans;
+    }
+};
