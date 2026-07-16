@@ -14,6 +14,9 @@ public:
                 s2.push_back(tolower((unsigned char)s[i]));
         }
 
-        return s1 == s2;
+        if (s1 == s2)
+            return 1;
+        else
+            return 0;
     }
 };
