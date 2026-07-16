@@ -10,7 +10,6 @@ public:
         for(int i=2;i<=n;i++){
          ans[i]=ans[i-2]+ans[i-1];
         }
-        int ans2=ans[n];
-        return ans2;
+        return ans[n];
     }
 };
