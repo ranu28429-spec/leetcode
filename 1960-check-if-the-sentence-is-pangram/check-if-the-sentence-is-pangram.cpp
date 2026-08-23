@@ -1,18 +1,18 @@
 class Solution {
 public:
     bool checkIfPangram(string sentence) {
-        string s;
-        for (char p = 'a'; p <= 'z'; p++) {
-            for (int i = 0; i < sentence.size(); i++) {
-                if (p == sentence[i]) {
-                    s += p;
+        string ans;
+        for(char ch='a';ch<='z';ch++){
+            for(int i=0;i<sentence.size();i++){
+                if(ch==sentence[i]){
+                    ans+=sentence[i];
                     break;
                 }
             }
         }
-        if (s.size() == 26)
+        if(ans.size()==26)
             return 1;
-        else
-            return 0;
+        else 
+        return 0;
     }
 };
