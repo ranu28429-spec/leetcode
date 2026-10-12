@@ -1,15 +1,16 @@
 class Solution {
 public:
     int reverse(int x) {
-        long long rem,ans=0,n=x;
-        while(n!=0){
-            rem=n%10;
+        long long ans=0;long long rem=0;
+        
+        while(x!=0){
+            rem=x%10;
+            x=x/10;
             ans=ans*10+rem;
-            n=n/10;
         }
-         if(ans>=INT_MAX || ans<=INT_MIN)
-          return 0;
-          else
+        if(ans<INT_MIN || ans>INT_MAX){
+            return 0;
+        }
         return ans;
     }
 };
