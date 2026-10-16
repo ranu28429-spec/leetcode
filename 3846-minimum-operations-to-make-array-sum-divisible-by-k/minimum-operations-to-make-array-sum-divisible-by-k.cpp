@@ -8,6 +8,6 @@ public:
             sum += nums[i];
         }
 
-        return sum%k;
+        return sum % k;
     }
 };
