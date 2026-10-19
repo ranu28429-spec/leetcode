@@ -4,7 +4,7 @@ public:
         vector<int> count(26, 0);
 
         int n = s.size();
-        int low = 0, high = 0, maxi = 0;
+        int high = 0, maxi = 0;
         for (int high = 0; high < n; high++) {
             count[s[high] - 'a']++;
         }
