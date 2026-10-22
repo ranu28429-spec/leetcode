@@ -1,15 +1,18 @@
 class Solution {
 public:
     int numJewelsInStones(string jewels, string stones) {
-     int count=0;
+        int count = 0;
+        vector<int> ans(128, 0);
 
-     for(int i=0;i<jewels.size();i++){
-        for(int j=0;j<stones.size();j++){
-            if(jewels[i]==stones[j]){
+        for (int i = 0; i < jewels.size(); i++) {
+            ans[jewels[i]] = 1;
+        }
+
+        for (int i = 0; i < stones.size(); i++) {
+            if (ans[stones[i]] == 1) {
                 count++;
             }
         }
-     }
-     return count;
-    }
-};
+            return count;
+        }
+    };
