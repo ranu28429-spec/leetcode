@@ -8,7 +8,7 @@ public:
             um[nums[i]]++;
         }
 
-        int maxi = INT_MIN;
+        int maxi = 0;
         int ans;
         for (auto x : um) {
             if (x.second > maxi){
