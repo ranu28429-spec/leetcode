@@ -4,16 +4,16 @@ public:
         if (n < 10) {
             return false;
         }
-        bool aliceturn = true;
+        bool alicecanwin = true;
         int index = 10;
         while (n > 0) {
             n = n - index;
             index--;
-            aliceturn = !aliceturn;
+            alicecanwin = !alicecanwin;
             if (n < index) {
-                return !aliceturn;
+                return !alicecanwin;
             }
         }
-        return aliceturn;
+        return alicecanwin;
     }
 };
