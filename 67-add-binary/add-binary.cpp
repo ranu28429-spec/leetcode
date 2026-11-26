@@ -20,9 +20,6 @@ public:
             i--, j--;
         }
 
-        if (carry > 0) {
-            ans += '1';
-        }
         reverse(ans.begin(), ans.end());
         return ans;
     }
